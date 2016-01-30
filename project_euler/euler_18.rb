@@ -26,7 +26,7 @@ EOS
 
 # 段ごとに配列に格納する、
 # 格納した値をmapでくるむ
-data = txt2.split("\n").map{|n| n.split("").map{|k| k.to_i}}
+p data = txt2.split("\n").map{|n| n.split("").map{|k| k.to_i}}
 
 num = data.length - 1
 

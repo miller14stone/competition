@@ -6,10 +6,11 @@
 int main() {
   int main = 100;
   int max = 999;
-
-  for ( i = 100; i < 1000; i++ ) { // for文で回す最大
-    for (j = 999; j >= i; j--) {
+  int p;
+  for (int i = 100; i < 1000; i++ ) { // for文で回す最大
+    for (int j = 999; j >= i; j--) {
       p = i * j;
     }
   }
+  printf("%d\n", p );
 }
