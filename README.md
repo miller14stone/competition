@@ -38,3 +38,4 @@
 
 <http://qiita.com/aki426/items/d698bc39b9298cf8bb0d>
 <http://postd.cc/how-to-c-in-2016-1/>
+<https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%A9%E3%83%88%E3%82%B9%E3%83%86%E3%83%8D%E3%82%B9%E3%81%AE%E7%AF%A9>
