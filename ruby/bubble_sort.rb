@@ -1,23 +1,46 @@
-a = (0..9).to_a
-a = a.sample(a.length)
+class BubbleSort
+  def initialize(n)
+    @target = Array.new(n)
+  end
 
-start_time = Time.now
+  def main
+    puts "準備中"
 
-i = 0
-while i < a.length
-  j = 1
-  # jの位置よりも前かどうか判別
-    while j < a.length - i
-      #比較する
-      if a[i] > a[i+j] then
-          a[i], a[i+j]=a[i+j], a[i]
-      end
-      j += 1
-    end
-    i += 1
+    @target.each_index do |i| # ---- 配列にランダムな値を格納
+      @target[i] = rand(1000)
+  end
+
+  p @target
+
+  puts "並び替え開始"
+  bubbleSort()
+  puts "終了"
+
+  p @target
 end
 
-end_time = Time.now
+private
 
-p a
-p ("timeee " + (end_time - start_time).to_s + "s")
+# ---- ソートアルゴリズム
+def bubbleSort()
+  flag = nil
+  begin
+    i = 0
+    flag = false
+    while i < @target.size - 1
+      if @target[i] > @target[i+1]
+        flag = true
+        j = @target[i]
+        @target[i] = @target[i+1]
+        @target[i+1] = j
+        p @target
+      end
+      i = i + 1
+    end
+  end while(flag)
+end
+
+end
+N = 10 #データの件数
+bubbleSort = BubbleSort.new(N)
+bubbleSort.main
